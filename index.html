@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styleindex.css" type="text/css" rel="stylesheet">
+    <title>Picasso</title>
+    <a id="haut_page"></a>
+  </head>
+  <body>
+    <h1 id="h1" >Biographie de Picasso</h1>
+    <div>
+      <h2>Date de picasso</h2>
+      <p>Voici les dates importantes de picasso ci-dessous :</p>
+      <ul>
+        <li>1988</li>
+        <li>1989</li>
+        <li>1990</li>
+      </ul>
+      <hr />
+      <h2>Ses oeuvres</h2>
+      <p>Guernica</p>
+      <img id="image1" src="images/guernica.jpg" />
+      <p>La pleureuse</p>
+      <img id="image2" src="images/lapleureuse.jpg"/>
+    </div>
+    <div style="border: 2px solid black">
+      <h2>Informations</h2>
+      <form action="/action_page.php">
+      <label for="fname">Prénom:</label></br>
+      <input type="text" id="fname" name="fname" value="Entrer votre prénom"></br>
+      <label for="lname">Nom:</label></br>
+      <input type="text" id="lname" name="lname" value="Entrer votre nom"></br>
+      <label for="email">Entrer votre email:</label></br>
+      <input type="email" id="email" name="email"></br>
+      <label for="pwd">Mot de pase:</label></br>
+      <input type="password" id="pwd" name="pwd"value="Entrer votre mot de passe"></br></br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Homme</label></br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Femme</label></br>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Autres</label></br></br>
+      <label for="birthday">Date de naissance:</label>
+      <input type="date" id="birthday" name="Date de naissance"></br></br>
+      <input type="checkbox" id="enfant1" name="enfant1" value="enfant1">
+      <label for="vehicle2"> J'ai pas d'enfant</label></br>
+      <input type="checkbox" id="enfant2" name="enfant2" value="enfant2">
+      <label for="vehicle3"> J'ai des enfants</label></br></br>
+      <input type="submit" value="Valider">
+      <input type="reset"></br></br>
+      </form> 
+    </div>
+    <div>
+      <h2>Commentaires</h2>
+      <form action="/action_page.php">
+        <textarea name="message" rows="10" cols="30">Trop bien picasso !</textarea>
+        <br><br>
+        <input type="submit"></br></br>
+      </form>
+    </div>
+    <div>
+      <img src="images/guernica.jpg" />
+      <table>
+        <tr>
+          <td>colonne1</td>
+          <td>colonne2</td>
+          <td>colonne3</td>
+          <td>colonne4</td>
+        </tr>
+        <tr>
+          <td>ligne1</td>
+          <td>ligne1</td>
+          <td>ligne1</td>
+          <td>ligne1</td>
+        </tr>
+        <tr>
+          <td>ligne2</td>
+          <td>ligne2</td>
+          <td>ligne2</td>
+          <td>ligne2</td>
+        </tr>
+        <tr>
+          <td>ligne3</td>
+          <td>ligne3</td>
+          <td>ligne3</td>
+          <td>ligne3</td>
+        </tr>
+        <tr>
+          <td>ligne4</td>
+          <td>ligne4</td>
+          <td>ligne4</td>
+          <td>ligne4</td>
+        </tr>
+        <tr>
+          <td>ligne5</td>
+          <td>ligne5</td>
+          <td>ligne5</td>
+          <td>ligne5</td>
+        </tr>
+      </table></br></br>
+      <a href="#haut_page">Haut de page</a>
+    </div>
+  </body>
+</html>

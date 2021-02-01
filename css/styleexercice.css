@@ -1,0 +1,98 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4c87af;
+}
+
+#pouce {
+  max-height: 200px;
+  max-width: auto;
+}
+.header {
+  background: rgb(255, 255, 255);
+}
+#business {
+  color: lightskyblue;
+  text-transform: uppercase;
+}
+#company {
+  color: black;
+  text-transform: capitalize;
+}
+
+.footer {
+  background: rgb(144, 211, 238);
+}
+
+.grandmain {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+}
+.petitmain {
+  width: 80%;
+  background: lightskyblue;
+}
+
+.aside {
+  width: 10%;
+}
+
+.bloc1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.carre1 {
+  width: 20%;
+}
+.carre2 {
+  text-align: center;
+  width: 60%;
+}
+.carre3 {
+  width: 20%;
+}
+
+.bloc2 {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.bloc3 {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+.carre4 {
+  width: 20%;
+}
+.carre5 {
+  text-align: center;
+  width: 60%;
+}
+.carre6 {
+  width: 20%;
+}

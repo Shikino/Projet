@@ -1,0 +1,74 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+#icone {text-align:right;}
+.header {
+  background: rgb(255, 175, 71);
+}
+
+.footer {
+  background: rgb(144, 211, 238);
+}
+
+.grandmain {
+  text-align: left;
+  background: yellow;
+  display: flex;
+  justify-content: flex-start;
+}
+.petitmain {
+  width: 60%;
+  background: tomato;
+}
+.aside1 {
+  background: rgb(140, 0, 255);
+  width: 20%;
+}
+
+.aside2 {
+  background: rgb(255, 105, 230);
+  width: 20%;
+}
+
+.bloc1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.carre1 {
+  width: 20%;
+}
+.carre2 {
+  text-align: center;
+  width: 60%;
+}
+.carre3 {
+  width: 20%;
+}
+
+.bloc2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bloc3 {
+  display:flex;
+  justify-content: flex-start;
+}
+.carre4 {
+  width: 20%;
+}
+.carre5 {
+  text-align: center;
+  width: 60%;
+}
+.carre6 {
+  width: 20%;
+}

@@ -1,0 +1,3 @@
+.ligne div:first-child{background: lightgreen;}
+.ligne div:last-child{background: rgb(144, 211, 238);}
+.ligne div:nth-child(2){background: rgb(238, 224, 144);}

@@ -1,0 +1,99 @@
+p {
+  margin: 20px;
+  padding: 10px;
+  background: black;
+  color: white;
+}
+#p3 {
+  background: black;
+  color: white;
+}
+
+/* Méthode Factorisation*/
+.p4,
+.p5,
+.p6 {
+  margin: 10px;
+  padding: 5px;
+  color: white;
+}
+.p4 {
+  background:black;
+}
+.p5 {
+  background: rgba(0,55,90,1)
+}
+.p6 {
+  background: rgba(90,09,200,0.75);
+}
+
+/*Class pour plusieurs images*/
+.imagebordure {
+  /*centrer l'image(2 premières lignes)*/
+  display: block;
+  margin: 0 auto;
+  border: 10px solid red;
+  width: 1000px;
+  height: 1000px;
+}
+
+/*ID pour une seule image*/
+#reduction {
+  border: 10px solid black;
+  width: 500px;
+  height: 500px;
+}
+
+/*Barre de menu verticale*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: rgb(7, 2, 2);
+  color: white;
+}
+
+#icone1 {
+  background-image: url("../images/icone.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  background-size: 150px 100px;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+#icone2 {
+  background-image: url("../images/icone1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px 100px;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+#icone3 {
+  background-image: url("../images/icone2.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 150px 100px;
+  /*mettre une dimension a la div pour pouvoir afficher les images*/
+  min-width: 200px;
+  min-height: 200px;
+}
+.container {
+  display: flex; /* or inline-flex */
+}
