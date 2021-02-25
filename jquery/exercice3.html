@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/stylesexercice3.css" />
+
+    <title>Index</title>
+  </head>
+  <body onload>
+    <h1>Commande</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="exampleFormControlSelect1">
+            Sélectionner le produit:
+          </label>
+
+          <select class="form-control" id="produit">
+            <option value="">--Choisis ton produit--</option>
+            <option id="choix1" value="Sandwitch">Sandwitch</option>
+            <option id="choix2" value="Pizza">Pizza</option>
+            <option id="choix3" value="Burger">Burger</option>
+          </select>
+          <br />
+
+          <div class="option Sandwitch">
+            <label>Les ingrédients :</label>
+            <input type="checkbox" id="tomate" name="tomate" value="Tomate" />
+            <label for="tomate"> Tomates</label>
+            <input
+              type="checkbox"
+              id="mayonaise"
+              name="mayonaise"
+              value="Mayonaise"
+            />
+            <label for="mayonaise"> Mayonaise</label>
+            <input type="checkbox" id="salade" name="salade" value="Salade" />
+            <label for="salade"> Salade</label><br /><br />
+          </div>
+          <div class="option Pizza">
+            <input type="radio" id="neptuna" name="gender" value="Neptuna" />
+            <label for="neptuna">Neptuna</label><br />
+            <input
+              type="radio"
+              id="napolitaine"
+              name="gender"
+              value="Napolitaine"
+            />
+            <label for="napolitaine">Napolitaine</label><br />
+            <input type="radio" id="regina" name="gender" value="Regina" />
+            <label for="regina">Régina</label><br /><br />
+          </div>
+          <div class="option Burger">
+            <input type="radio" id="taille M" name="taille" value="M" />
+            <label for="taillem">Taille M</label><br />
+            <input type="radio" id="taille L" name="taille" value="L" />
+            <label for="taillel">Taille L</label><br />
+            <input type="radio" id="taillexl" name="taille" value="XL" />
+            <label for="taillexl">Taille XL</label><br /><br />
+          </div>
+          <div id="emplacement"></div>
+          <div class="form-group">
+            <label for="quantite">quantité:</label>
+            <input type="number" class="form-control" id="qtt" min="1" />
+            <button type="button" class="btn btn-primary">Valider</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <textarea id="retour"></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".option").hide();
+        $("#retour").val("");
+        $("select").val("");
+        $("select").change(function () {
+          $(".option").hide();
+          $("." + $("#produit").val()).show();
+        });
+      });
+      $("button").click(function () {
+        let tab = [];
+        $("." + $("#produit").val() + " :checked").each(function () {
+          tab.push($(this).val());
+        });console.log(tab);
+        $("#retour").val(
+        $("#qtt").val()+" "+$("#produit").val()+" "+tab.join(", ")
+      );
+      });
+    </script>
+  </body>
+</html>

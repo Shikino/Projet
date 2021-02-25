@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link href="css/styleexcercice1.css" type="text/css" rel="stylesheet" />
+    <title>Exercice</title>
+  </head>
+  <body onload="miniature()">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9">
+          <img id="grand" src="images/statueliberte.jpg" class="col-md-12" />
+          <div>
+            <img
+              src="images/statueliberte.jpg"
+              class="col-md-2"
+              onclick="changement"
+            />
+            <p class="cacher">statue de la liberté</p>
+            <img
+              src="images/toureiffel.jpg"
+              class="col-md-2"
+              onclick="changement"
+            />
+            <p class="cacher">tour eiffel</p>
+            <img
+              src="images/arctriomphe.jpeg"
+              class="col-md-2"
+              onclick="changement"
+            />
+            <p class="cacher">arc de triomphe</p>
+            <img
+              src="images/tourdepise.jpg"
+              class="col-md-2"
+              onclick="changement"
+            />
+            <p class="cacher">tour de pise</p>
+            <img
+              src="images/mexiqu.jpeg"
+              class="col-md-2"
+              onclick="changement"
+            />
+            <p class="cacher">mexique</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <p id="des"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script></script>
+
+    <script>
+      function miniature() {
+        $("#des").text($("img:nth-of-type(2)").next().text());
+        $("img").click(function () {
+          $("#grand").attr("src", $(this).attr("src"));
+          $("#des").text($(this).next().text());
+        });
+      }
+    </script>
+  </body>
+</html>

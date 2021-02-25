@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Mon H1 <b>est en gras</b></h1>
+    <h2>Mon H2</h2>
+
+    <button onclick="modifTexteH1()">changer le texte du H1</button>
+    <button onclick="modifHtmlH1()">changer le HTML du H1</button>
+    <button onclick="changerQt()">changer qt</button>
+    <button onclick="hidebouton()">cacher le Bouton</button>
+
+    <h3>A demonstration of the :in-range selector.</h3>
+    <form onsubmit="valid()">
+      <input type="number" required />
+      <input type="submit" value="valider" />
+    </form>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+
+    <script>
+      function moyenne(tab) {
+        if (tab.length == 0) {
+          return 0;
+        }
+        let somme = 0;
+        let i;
+        for (i = 0; i < tab.length; i++) {
+          somme += tab[i];
+        }
+        return (somme /= tab.length);
+      }
+      tab = [5, 15, 14, 20];
+      console.log(moyenne(tab));
+
+      function max(tab) {
+        let max = tab[0];
+        let i;
+        for (i = 0; i < tab.length; i++) {
+          if (tab[i] > max) {
+            max = tab[i];
+          }
+        }
+        return max;
+      }
+      tab = [16, 3.2, 2.3, 6, 5, 0.1, 19];
+      console.log(max(tab));
+
+      function position(tab, val) {
+        for (i = 0; i < tab.length; i++) {
+          if (tab[i] == val) {
+            return i + 1;
+          }
+        }
+      }
+      tab = [16, 3.2, 2.3, 6, 5, 0.1, 19];
+      console.log(position(tab, 19));
+
+      function positio(tab, val) {
+        let i = 0;
+        while (i < tab.length) {
+          if (tab[i] == val) {
+            return i + 1;
+          }
+          i++;
+        }
+      }
+      tab = [16, 3.2, 2.3, 6, 5, 0.1, 19];
+      console.log(positio(tab, 19));
+
+      function jour(tab, mois, annee) {
+        if (tab[mois] == 2) {
+          if (tab[annee] % 4 == 0) {
+            return 29;
+          } else {
+            return 28;
+          }
+        }
+        return tab[mois - 1];
+      }
+      tab = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      console.log(jour(tab, 2, 2020));
+
+      function carré(nombre) {
+        return nombre * nombre;
+      }
+      console.log(carré(3));
+
+      function racinecarré(nombre) {
+        return Math.sqrt(nombre);
+      }
+      console.log(racinecarré(9));
+
+      function somme(j, k) {
+        return j + k < 100;
+      }
+      console.log(somme(1, 5));
+
+      function perimetre(longueur, largeur) {
+        return (longueur + largeur) * 2;
+      }
+      console.log(perimetre(10, 5));
+
+      function conversion(heures, minutes) {
+        return heures * 3600 + minutes * 60;
+      }
+      console.log(conversion(2, 40));
+
+      function divisible(nombre1, nombre2) {
+        return nombre1 % nombre2 == 0;
+      }
+      console.log(divisible(4, 2));
+
+      function inversion(tab) {
+        let tableau = [];
+        for (i = tab.length - 1; i >= 0; i--) {
+          tableau.push(tab[i]);
+        }
+        return tableau;
+      }
+
+      tab = [1, 2, 3, 4];
+      console.log(inversion(tab));
+
+      function obj(tab) {
+        let obj = { nom: "jean", prenom: "marc", age: 50, revenu: 1200 };
+        info = "";
+        for (i = 0; i < tab.length; i++) {
+
+        }
+      }
+
+      function impot(revenu) {
+        let impot;
+        switch (revenu) {
+          case revenu <= 1000:
+            impot = revenu * 0.05;
+            break;
+          case revenu <= 2000:
+            impot = revenu * 0.07;
+            break;
+          case revenu <= 3000:
+            impot = revenu * 0.11;
+            break;
+          default:
+            impot= revenu * 0.15;
+        }
+      }
+      function modifTexteH1() {
+        $("h1").text("texte du H1 changé");
+      }
+
+      function modifHtmlH1() {
+        $("h1").html("<p>html du H1 changé </p>");
+        alert($("h1").html());
+      }
+
+      function valid() {
+        alert($("input[type=number]").val());
+      }
+      function changerQt() {
+        $("input[type=number]").val(10);
+      }
+
+      $(document).ready(function () {
+        $("h1").click(function () {
+          alert("h1 va disparaitre");
+          $(this).hide();
+        });
+      });
+
+      function hidebouton() {
+        let bouton = $("button");
+        console.log($(this));
+      }
+    </script>
+  </body>
+</html>
