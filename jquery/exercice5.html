@@ -14,19 +14,16 @@
     <title>Ajax</title>
   </head>
   <body>
-    <div id="cc"></div>
-
     <br />
-
-    <button
-      id="bouton"
-      type="button"
-      onclick="requete()"
-      class="btn btn-primary"
-    >
-      Primary
-    </button>
-    <div id="contenur"></div>
+    <div class="card col-md-2">
+      <h2>ID du post</h2>
+      <div class="card-body">
+        <h5 class="card-title">titre du post</h5>
+        <button class="btn btn-primary" onclick="requete()">
+          commentaires
+        </button>
+      </div>
+    </div>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -43,17 +40,10 @@
         request.done(function (response) {
           let tab = [];
           $.each(response, function () {
-            // traitement qui se fait a chaque iteration
-            tab.push(this.userId);
-            //l'objet c'est "this", l'élément en cours et pour recuperer le nom de l'attribut on met le"."
+            tab.push({ id: this.id, titre: this.title });
           });
-          let x = Array.from(new Set(tab));
-          // on crée une instance d'array et dans cette derniere on crée un nouvel ensemble dans le tableau.
-          $("#cc").text(x);
-          // on l'ajoute dans une div prédefini sous-forme de text
-          for (i = 0; i < x.length; i++) {
-            $(".table").append("<tr><td>" + x[i] + "<td><tr>");
-          }
+          console.log(tab);
+          $(".posts").html(affichPosts(tab));
         });
 
         request.fail(function (http_error) {
@@ -69,24 +59,16 @@
           //Code à jouer après done OU fail dans tous les cas
         });
       }
-      function elimineDoublon(tab) {
-        let tab2 = [];
-        for (i = 0; i < tab.length; i++) {
-          if (tab2.indexOf(tab[i]) === -1) {
-            tab2.push(tab[i]);
-          }
+      function affichPosts(tab) {
+        let chaine = "";
+        let i;
+        for (i = 0; i < 12; i++) {
+          chaine +=
+            '<div class="card col-md-2"><h2>ID du post</h2><div class="card-body"><h5 class="card-title">titre du post</h5><button class="btn btn-primary" onclick="requete()">commentaires</button></div></div>';
         }
-        return tab2;
-      }
-      function genTab(tab) {
-        let chaine =
-          '<table class="table table-striped"><thead> <tr><th scope="col">#</th></tr></thead><tbody></tbody></table>';
-        for (i = 0; i < tab.length; i++) {
-          chaine += "<tr><td>" + tab[i] + "<td><tr>";
-        }
-        chaine += "</tbody></table>";
         return chaine;
       }
+    
     </script>
   </body>
 </html>

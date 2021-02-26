@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />    <title>exepmle</title>
+  </head>
+  <body>
+    <br />    <button type="button" onclick="requete()" class="btn btn-primary">
+      Primary
+    </button>
+    <div id="contenu"></div>    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>    <script>
+      function requete() {
+        let request = $.ajax({
+          url: "https://jsonplaceholder.typicode.com/posts/",
+          method: "GET",
+          dataType: "json",
+        });        request.done(function (response) {
+          let tab = [];
+          $.each(response, function () {
+            tab.push(this.userId);
+          });          //tab=Array.from(new Set(tab));
+          tab = elimineDoublon(tab);
+          $("#contenu").html(genTab(tab));          $(".tar").click(function () {
+            let v = $(this).text();
+            $("p").empty();
+            console.log(v);            let rcomments = $.ajax({
+              url:
+                "https://jsonplaceholder.typicode.com/posts/" + v + "/comments",
+              method: "GET",
+              dataType: "json",
+            });            rcomments.done(function (lui) {
+              console.log(lui);
+              let x = "";              for (i = 0; i < lui.length; i++) {
+                x += "<p>" + lui[i].body;
+                ("</p>");
+              }
+              console.log(x);
+              $("#contenu").append(x);
+            });
+          });
+        });        request.fail(function (http_error) {
+          //Code à jouer en cas d'éxécution en erreur du script du PHP          let server_msg = http_error.responseText;
+          let code = http_error.status;
+          let code_label = http_error.statusText;
+          alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
+        });
+      }      function elimineDoublon(tab) {
+        let tab2 = [];
+        for (i = 0; i < tab.length; i++) {
+          if (tab2.indexOf(tab[i]) === -1) {
+            tab2.push(tab[i]);
+          }
+        }
+        return tab2;
+      }      function genTab(tab) {
+        let chaine = "";        for (i = 0; i < tab.length; i++) {
+          chaine += '<button class="tar">' + tab[i] + "</button>";
+        }
+        chaine += "";        return chaine;
+      }      // $(".tar").click(function () {
+      //   console.log(12)
+      //   let rcomments = $.ajax({
+      //     url: "https://jsonplaceholder.typicode.com/posts/1/comments",
+      //     method: "GET",
+      //     dataType: "json",
+      //   });
+    </script>
+  </body>
+</html>
