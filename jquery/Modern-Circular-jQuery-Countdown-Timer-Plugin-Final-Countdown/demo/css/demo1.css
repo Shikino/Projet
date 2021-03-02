@@ -3,7 +3,7 @@ html, body {
 }
 
 html {
-	background-image: url('../images/toystory.jpg');
+	background-image: url('../img/sample.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;	
@@ -11,7 +11,7 @@ html {
 
 body {
 	background-color: rgba(44,62,80 , 0.6 );
-	background-image: url('../images/');
+	background-image: url('../img/pattern.png');
 	background-position: center;
 	background-repeat: repeat;
 	font-family: 'Raleway', 'Arial', sans-serif;
