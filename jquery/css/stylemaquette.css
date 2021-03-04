@@ -1,0 +1,151 @@
+.carre1,
+.carre3 {
+  background-color: #199bd9;
+  opacity: 0.9;
+  color: white;
+}
+.carre2,
+.carre4 {
+  background-color: #5db8e4;
+  opacity: 0.9;
+  color: white;
+}
+.icono {
+  color: white;
+  background: linear-gradient(to left, #008fd5 50%, #4db1e2 50%);
+}
+.bggris {
+  background-color: #efefef;
+}
+.ecritur {
+  font-size: 160%;
+}
+.bordure {
+  border: solid 1px;
+  border-color: #cfcfcf;
+}
+.taille {
+  width: 180px;
+  height: 120px;
+  border: 3px solid white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.btncheck {
+  background-color: #008fd5;
+  color: white;
+}
+.barre {
+  border-right: 1px solid #4eaee0;
+}
+#btnmake {
+  background-color: white;
+  color: #4eaee0;
+}
+.pttpolice {
+  font-size: small;
+}
+
+.bgbleuciel{background: #32a5dc;
+text-align: center;
+color:#97d6e7;
+height: 80px;}
+
+.bgbleufonce{background-color: #008fd5;
+  text-align: center;
+  color:#97d6e7;
+  height: 80px;}
+
+.bglatest{background-color: #008fd5;
+color:white;
+padding:5px;}
+
+.bglatesticon{background-color: #4db1e2;
+color:white;}
+
+.centrer{margin-top: 20px;}
+
+.rond { background-color: white;color:#008ed4; border-radius: 50%; border: 1x solid grey; padding:10px; }
+.rond1 { background-color: #008ed4;color : white; border-radius: 50%; border: 1x solid grey; padding:10px; }
+
+.ecriturebleu{color:#3c92df}
+.accordion {
+  background-color: #ffffff;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #008fd5;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #008fd5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+
+.recent-activities .item {
+  border-bottom: 1px solid #eee
+}
+
+.recent-activities .item div[class*='col-'] {
+  padding: 15px
+}
+
+
+
+.recent-activities p {
+  font-size: 0.75em;
+  color: #999
+}
+
+.recent-activities .icon {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color:#008fd5;
+  text-align: center;
+  display: inline-block
+}
+
+.recent-activities .date {
+  font-size: 0.75em;
+  color: #999;
+  padding: 10px;
+}
+
+.recent-activities .date-holder {
+  padding: 0 !important;
+  border-right: 1px solid #eee
+}
+
+
+
+
