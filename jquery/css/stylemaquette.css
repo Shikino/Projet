@@ -11,9 +11,18 @@
   color: white;
 }
 .icono {
+  height: 90px;
   color: white;
   background: linear-gradient(to left, #008fd5 50%, #4db1e2 50%);
 }
+
+.iconofooter {
+  color:  #008fd5;
+  margin:20px;
+}
+
+.couleur{color: #5ab7e2;}
+.bordure{color: grey}
 .bggris {
   background-color: #efefef;
 }
@@ -46,29 +55,57 @@
   font-size: small;
 }
 
-.bgbleuciel{background: #32a5dc;
-text-align: center;
-color:#97d6e7;
-height: 80px;}
-
-.bgbleufonce{background-color: #008fd5;
+.bgbleuciel {
+  background: #32a5dc;
   text-align: center;
-  color:#97d6e7;
-  height: 80px;}
+  color: #97d6e7;
+  height: 80px;
+}
 
-.bglatest{background-color: #008fd5;
-color:white;
-padding:5px;}
+.bgbleufonce {
+  background-color: #008fd5;
+  text-align: center;
+  color: #97d6e7;
+  height: 80px;
+}
 
-.bglatesticon{background-color: #4db1e2;
-color:white;}
+.bgbleufonce2 {
+  background-color: #213540;
+}
 
-.centrer{margin-top: 20px;}
+.bglatest {
+  background-color: #008fd5;
+  color: white;
+  padding: 5px;
+}
 
-.rond { background-color: white;color:#008ed4; border-radius: 50%; border: 1x solid grey; padding:10px; }
-.rond1 { background-color: #008ed4;color : white; border-radius: 50%; border: 1x solid grey; padding:10px; }
+.bglatesticon {
+  background-color: #4db1e2;
+  color: white;
+}
 
-.ecriturebleu{color:#3c92df}
+.centrer {
+  margin-top: 20px;
+}
+
+.rond {
+  background-color: white;
+  color: #008ed4;
+  border-radius: 50%;
+  border: 1x solid grey;
+  padding: 10px;
+}
+.rond1 {
+  background-color: #008ed4;
+  color: white;
+  border-radius: 50%;
+  border: 1x solid grey;
+  padding: 10px;
+}
+
+.ecriturebleu {
+  color: #3c92df;
+}
 .accordion {
   background-color: #ffffff;
   color: #444;
@@ -109,30 +146,26 @@ color:white;}
   transition: max-height 0.2s ease-out;
 }
 
-
-
 .recent-activities .item {
-  border-bottom: 1px solid #eee
+  border-bottom: 1px solid #eee;
 }
 
-.recent-activities .item div[class*='col-'] {
-  padding: 15px
+.recent-activities .item div[class*="col-"] {
+  padding: 15px;
 }
-
-
 
 .recent-activities p {
   font-size: 0.75em;
-  color: #999
+  color: #999;
 }
 
 .recent-activities .icon {
   width: 35px;
   height: 35px;
   line-height: 35px;
-  color:#008fd5;
+  color: #008fd5;
   text-align: center;
-  display: inline-block
+  display: inline-block;
 }
 
 .recent-activities .date {
@@ -143,9 +176,5 @@ color:white;}
 
 .recent-activities .date-holder {
   padding: 0 !important;
-  border-right: 1px solid #eee
+  border-right: 1px solid #eee;
 }
-
-
-
-
